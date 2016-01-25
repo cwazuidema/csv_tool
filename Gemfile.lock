@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (0.7.7)
+    highline (1.7.8)
+    ruby-ole (1.2.12)
+    spreadsheet (1.1.1)
+      ruby-ole (>= 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorize
+  highline
+  spreadsheet
+
+BUNDLED WITH
+   1.11.2
