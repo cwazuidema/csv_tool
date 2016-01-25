@@ -29,16 +29,14 @@ end
 def see_headers(sheet1)
 	header = sheet1.row(0)
   header.each do |header|
- 	puts header.red
+ 	  puts header.red
   end
 end
 
 def add_client(book, sheet1)
-	counter = 0
 	header = sheet1.row(0)
-	header.each do |header|
-		sheet1.rows[1][counter] = @cli.ask "What data do we need for #{ header.red }"
-    counter = counter +1
+	header.each_with_index do |header,index|
+		sheet1.rows[1][index] = @cli.ask "What data do we need for #{ header.red }"
   end
   book.write @cli.ask "What is the filename of this file (add .xls at the end)"
 end
